@@ -19,22 +19,24 @@ const AnimeDetails = () => {
     <div className="details-container">
       <div className="details-wrapper">
         <img className="details-image" src={anime.images.jpg.large_image_url} alt={anime.title} />
+        
         <div className="details-content">
           <h1 className="details-title">{anime.title}</h1>
           <p className="details-description">{anime.synopsis || "No description available."}</p>
+          
           <div className="details-info">
-            <span>Rating: {anime.score || "N/A"}</span>
-            <span>Episodes: {anime.episodes || "N/A"}</span>
-            <span>Status: {anime.status}</span>
+            <span><strong>Episodes:</strong> {anime.episodes || "N/A"}</span>
+            <span><strong>Status:</strong> {anime.status}</span>
+            <span><strong>Score:</strong> {anime.score || "N/A"}</span>
           </div>
         </div>
       </div>
 
       <div className="video-container">
         {anime.trailer.embed_url ? (
-          <iframe src={anime.trailer.embed_url} allowFullScreen title="Trailer"></iframe>
+          <iframe src={anime.trailer.embed_url} allowFullScreen title="Anime Trailer"></iframe>
         ) : (
-          <p>No trailer available.</p>
+          <p className="no-trailer">No trailer available.</p>
         )}
       </div>
     </div>
