@@ -1,55 +1,36 @@
-/* Home Container */
 .home-container {
   background-color: #111;
   color: white;
-  padding: 2vw;
+  padding: 20px;
   min-height: 100vh;
 }
 
-/* Heading */
 .heading {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   font-weight: bold;
-  margin-bottom: 2vw;
+  margin-bottom: 20px;
   color: #ff3c3c;
   text-align: center;
 }
 
-/* Filters (Search + Genre) */
 .filters-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2vw;
+  gap: 15px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
-  margin-bottom: 2vw;
 }
 
-/* Search Bar */
-.search-input {
-  width: clamp(200px, 40vw, 300px);
-  padding: 1vw;
+.search-input, .genre-select {
+  width: clamp(200px, 30%, 300px);
+  padding: 10px 15px;
   border-radius: 8px;
   border: 1px solid #555;
+  outline: none;
   background-color: #222;
   color: white;
-  font-size: clamp(12px, 2vw, 16px);
-}
-
-.search-input:focus {
-  border-color: #ff3c3c;
-  background-color: #1a1a1a;
-}
-
-/* Genre Dropdown */
-.genre-select {
-  width: clamp(150px, 25vw, 220px);
-  padding: 1vw;
-  border-radius: 8px;
-  border: 1px solid #555;
-  background-color: #222;
-  color: white;
-  font-size: clamp(12px, 2vw, 16px);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .genre-select option {
@@ -57,62 +38,54 @@
   color: white;
 }
 
-/* Anime Grid */
 .anime-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(140px, 20vw, 200px), 1fr));
-  gap: 2vw;
-  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
 }
 
-/* Anime Card */
+/* Fluid Anime Card */
 .anime-card {
   background-color: #1e1e1e;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  width: 100%;
-  max-width: clamp(140px, 20vw, 200px);
-  height: clamp(260px, 30vw, 330px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.anime-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 100, 100, 0.4);
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 3/4;
 }
 
 .anime-card img {
   width: 100%;
-  height: clamp(160px, 20vw, 230px);
+  height: auto;
+  aspect-ratio: 3/4;
   object-fit: cover;
-  border-radius: 4px;
 }
 
 .anime-card h3 {
   padding: 10px;
   color: white;
-  font-size: clamp(12px, 1.8vw, 14px);
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
   font-weight: bold;
-  height: clamp(28px, 4vw, 40px);
+  height: 2.5em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/* Watch Button */
 .watch-button {
-  padding: 0.6vw 1vw;
+  padding: 8px 12px;
   background-color: #ff4747;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: clamp(12px, 1.8vw, 14px);
+  font-size: clamp(0.8rem, 1vw, 1rem);
   margin: 10px;
   transition: background-color 0.3s ease;
 }
