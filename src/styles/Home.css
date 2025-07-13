@@ -61,12 +61,12 @@
   color: white;
 }
 
-/* Anime Grid */
+/* Anime Grid (Fixed Cards) */
 .anime-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
 /* Anime Card */
@@ -141,12 +141,12 @@
   }
 
   .anime-card {
-    width: 160px;
+    width: 150px;
     height: 270px;
   }
 
   .anime-card img {
-    height: 180px;
+    height: 170px;
   }
 
   .anime-card h3 {
@@ -174,12 +174,12 @@
   }
 
   .anime-card {
-    width: 140px;
+    width: 130px;
     height: 250px;
   }
 
   .anime-card img {
-    height: 160px;
+    height: 150px;
   }
 
   .anime-card h3 {
