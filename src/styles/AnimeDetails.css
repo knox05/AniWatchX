@@ -1,0 +1,116 @@
+.anime-details-wrapper {
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.anime-details-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.anime-image img {
+  width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.anime-content {
+  max-width: 600px;
+  flex: 1;
+}
+
+.anime-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.anime-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.genres {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.genre-badge {
+  background: #333;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.watch-now-btn {
+  background-color: #ff4747;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.watch-now-btn:hover {
+  background-color: #e43e3e;
+}
+
+.anime-synopsis {
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.anime-synopsis h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.anime-synopsis p {
+  line-height: 1.6;
+  color: #bbb;
+}
+
+/* 📱 Mobile Fix */
+@media (max-width: 768px) {
+  .anime-details-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .anime-content {
+    width: 100%;
+  }
+
+  .anime-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .anime-info p {
+    font-size: 0.95rem;
+  }
+
+  .watch-now-btn {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .genres {
+    justify-content: center;
+  }
+}
