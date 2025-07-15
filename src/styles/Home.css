@@ -54,20 +54,32 @@
   max-width: 800px;
 }
 
-.hero-overlay button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #ff4747;
+.hero-overlay-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.hero-overlay-buttons button {
+  background-color: #ff4747;
   color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  transition: background 0.3s ease;
+  min-width: 120px;
+  max-width: 180px;
+  white-space: nowrap;
 }
 
-.hero-overlay button:hover {
-  background: #e53737;
+.hero-overlay-buttons button:hover {
+  background-color: #e53737;
 }
+
 
 /* Filters */
 .filters-container {
@@ -89,7 +101,6 @@
   color: #fff;
   font-size: 16px;
   min-width: 200px;
-
   background-color: #1a1a1a;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg fill='white' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
@@ -277,7 +288,6 @@
   color: #aaa;
 }
 
-
 /* Pagination Controls */
 .pagination-controls {
   display: flex;
@@ -345,6 +355,23 @@
   .anime-card h3 {
     font-size: 0.8rem;
   }
+
+  .hero-overlay {
+    padding: 1.5rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .hero-overlay button {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -356,5 +383,27 @@
 
   .anime-card h3 {
     font-size: 0.75rem;
+  }
+
+  .hero-overlay {
+    padding: 1.2rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.8rem;
+  }
+
+  .hero-overlay button {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .hero-overlay-buttons {
+    flex-direction: column;
+    gap: 8px;
   }
 }
