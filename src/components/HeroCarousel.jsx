@@ -20,36 +20,37 @@ const HeroCarousel = () => {
     const timer = setInterval(() => {
       if (spotlight.length) {
         setIndex(prev => (prev + 1) % spotlight.length);
-        setAnimKey(prev => prev + 1); 
+        setAnimKey(prev => prev + 1);
       }
     }, 5000);
     return () => clearInterval(timer);
   }, [spotlight]);
 
   if (!spotlight.length) return null;
+
   const anime = spotlight[index];
 
   return (
     <div
       key={animKey}
-      className="hero-section fade-slide"
+      className="hero-carousel"
       style={{ backgroundImage: `url(${anime.images.jpg.large_image_url})` }}
     >
       <div className="hero-overlay">
-        <div className="hero-content">
-          <span className="hero-spotlight">#{index + 1} Spotlight</span>
-          <h1 className="hero-title">{anime.title}</h1>
-          <div className="hero-meta">
-            <span>{anime.duration || "Unknown"}</span>
-            <span>{anime.aired?.prop?.from?.year || "Unknown"}</span>
-            <span className="quality-badge">HD</span>
-            <span className="quality-badge">SUB</span>
-          </div>
-          <p className="hero-description">{anime.synopsis?.slice(0, 240)}...</p>
-          <div className="hero-buttons">
-            <button onClick={() => navigate(`/watch/${anime.mal_id}`)} className="hero-watch-now">▶ Watch Now</button>
-            <button onClick={() => navigate(`/anime/${anime.mal_id}`)} className="hero-detail">Detail</button>
-          </div>
+        <span className="hero-spotlight">#{index + 1} Spotlight</span>
+        <h1>{anime.title}</h1>
+        <div className="hero-meta">
+          <span>{anime.duration || "Unknown"}</span>
+          <span>{anime.aired?.prop?.from?.year || "Unknown"}</span>
+          <span className="quality-badge">HD</span>
+          <span className="quality-badge">SUB</span>
+        </div>
+        <p>{anime.synopsis?.slice(0, 240)}...</p>
+
+        {/* Updated button container */}
+        <div className="hero-overlay-buttons">
+          <button onClick={() => navigate(`/watch/${anime.mal_id}`)}>▶ Watch Now</button>
+          <button onClick={() => navigate(`/anime/${anime.mal_id}`)}>Detail</button>
         </div>
       </div>
     </div>
