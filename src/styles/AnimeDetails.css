@@ -1,0 +1,164 @@
+.anime-details-page {
+  background-color: #0e0e0e;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 100px 20px 30px; /* Add top padding */
+  min-height: 100vh;
+}
+
+
+.details-header {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.poster-section {
+  flex-shrink: 0;
+}
+
+.anime-poster {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.details-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-title {
+  font-size: 2rem;
+  color: #ff4747;
+  margin-bottom: 10px;
+}
+
+.details-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.details-tags span {
+  background-color: #ff4747;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.genre-badge {
+  background: #222;
+  border: 1px solid #ff4747;
+  color: #ff4747;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.details-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.watch-btn,
+.trailer-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.watch-btn {
+  background: #ff4747;
+  color: white;
+}
+
+.watch-btn:hover {
+  background-color: #e43e3e;
+}
+
+.trailer-btn {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #444;
+}
+
+.trailer-btn:hover {
+  background-color: #444;
+}
+
+.synopsis-text {
+  color: #bbb;
+  margin-top: 10px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.details-sidebar {
+  flex: 1;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  font-size: 0.9rem;
+}
+
+.details-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details-sidebar li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.details-sidebar strong {
+  color: #fff;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .details-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-main {
+    width: 100%;
+  }
+
+  .details-sidebar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .details-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .watch-btn,
+  .trailer-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

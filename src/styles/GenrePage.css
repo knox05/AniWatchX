@@ -1,0 +1,47 @@
+.genre-page {
+  padding: 80px 20px 20px;
+  background-color: #0e0e0e;
+  color: white;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.genre-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ff4747;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.genre-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.genre-card:hover {
+  transform: scale(1.03);
+}
+
+.genre-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.genre-card p {
+  padding: 10px;
+  font-size: 0.95rem;
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
